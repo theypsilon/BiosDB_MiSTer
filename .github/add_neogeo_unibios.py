@@ -7,17 +7,17 @@ with open('db.json', 'r') as file:
 del data['base_files_url']
 del data['db_url']
 
-data['zips'] = {
+data['archives'] = {
     "neogeo_unibios": {
-        "contents_file": {
+        "archive_file": {
             "hash": "1986c39676354d19ae648a914bd914f7",
             "size": 101498,
             "url": "http://unibios.free.fr/download/uni-bios-40.zip"
         },
         "description": "Extracting NeoGeo UniBios from http://unibios.free.fr",
-        "internal_summary": {
+        "summary_inline": {
             "files": {
-                "|games/NEOGEO/uni-bios.rom": {
+                "games/NEOGEO/uni-bios.rom": {
                     "hash": "4f0aeda8d2d145f596826b62d563c4ef",
                     "size": 131072,
                     "tags": [
@@ -25,32 +25,35 @@ data['zips'] = {
                         data['tag_dictionary']['games'],
                         data['tag_dictionary']['neogeo']
                     ],
-                    "zip_id": "neogeo_unibios",
-                    "zip_path": "uni-bios.rom"
+                    "path": "pext",
+                    "arc_id": "neogeo_unibios",
+                    "arc_at": "uni-bios.rom"
                 }
             },
             "folders": {
-                "|games/NEOGEO": {
-                    "zip_id": "neogeo_unibios",
+                "games/NEOGEO": {
+                    "arc_id": "neogeo_unibios",
                     "tags": [
                         data['tag_dictionary']['games'],
                         data['tag_dictionary']['neogeo']
-                    ]
+                    ],
+                    "path": "pext"
                 }
             }
         },
-        "kind": "extract_single_files",
+        "format": "zip",
+        "extract": "selective",
     },
     "neogeo_unibioscd": {
-        "contents_file": {
+        "archive_file": {
             "hash": "e2ec14752f65aef00fc33e68cf2fc301",
             "size": 381292,
             "url": "http://unibios.free.fr/download/uni-bioscd-33.zip"
         },
         "description": "Extracting NeoGeo CD UniBios from http://unibios.free.fr",
-        "internal_summary": {
+        "summary_inline": {
             "files": {
-                "|games/NeoGeo-CD/uni-bioscd.rom": {
+                "games/NeoGeo-CD/uni-bioscd.rom": {
                     "hash": "08ca8b2dba6662e8024f9e789711c6fc",
                     "size": 524288,
                     "tags": [
@@ -58,21 +61,24 @@ data['zips'] = {
                         data['tag_dictionary']['games'],
                         data['tag_dictionary']['neogeo']
                     ],
-                    "zip_id": "neogeo_unibioscd",
-                    "zip_path": "uni-bioscd.rom"
+                    "path": "pext",
+                    "arc_id": "neogeo_unibioscd",
+                    "arc_at": "uni-bioscd.rom"
                 }
             },
             "folders": {
-                "|games/NeoGeo-CD": {
-                    "zip_id": "neogeo_unibioscd",
+                "games/NeoGeo-CD": {
+                    "arc_id": "neogeo_unibioscd",
                     "tags": [
                         data['tag_dictionary']['games'],
                         data['tag_dictionary']['neogeo']
-                    ]
+                    ],
+                    "path": "pext"
                 }
             }
         },
-        "kind": "extract_single_files",
+        "format": "zip",
+        "extract": "selective",
     }
 }
 
